@@ -1,0 +1,28 @@
+# Data directories
+prometheus_data/
+grafana_data/
+
+# Environment files
+.env
+
+# Temporary files
+*.tmp
+*.log
+/tmp/
+
+# Load test files
+/tmp/load_test_*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker/

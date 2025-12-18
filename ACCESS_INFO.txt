@@ -1,0 +1,65 @@
+╔═══════════════════════════════════════════════════════════════╗
+║     SMART SYSTEM HEALTH MONITOR - ACCESS INFORMATION          ║
+╚═══════════════════════════════════════════════════════════════╝
+
+📊 GRAFANA DASHBOARD (Main Interface)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+URL:      http://localhost:3000
+Username: admin
+Password: admin
+
+Dashboard: Dashboards → Smart System Health Monitor
+Direct:    http://localhost:3000/d/smart-health-monitor/smart-system-health-monitor
+
+
+📈 PROMETHEUS (Metrics & Queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+URL:     http://localhost:19090
+Targets: http://localhost:19090/targets
+Alerts:  http://localhost:19090/alerts
+Graph:   http://localhost:19090/graph
+
+
+🖥️  NODE EXPORTER (Raw Metrics)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+URL: http://localhost:9100/metrics
+
+
+⚙️  QUICK COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Start:        ./run.sh
+Stop:         ./stop.sh
+Status:       docker compose ps
+Logs:         docker compose logs -f
+Demo Load:    ./scripts/load_generator.sh
+
+
+✅ CURRENT STATUS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+All services running ✓
+Dashboard showing data ✓
+Alerts configured ✓
+Predictive analytics active ✓
+
+
+🎯 WHAT'S MONITORED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ CPU Usage (per core)
+✓ Memory Usage
+✓ Disk Usage
+✓ System Uptime
+✓ Health Score (0-100)
+✓ 10-Minute Predictions
+✓ Load Average
+✓ Temperature (if available)
+✓ Battery (if available)
+
+
+📝 IMPORTANT NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Port 19090 is used for Prometheus (external access)
+• Port 9090 is used internally between containers
+• Grafana datasource correctly uses http://prometheus:9090
+• All data persists across restarts
+• Dashboard updates every 10-15 seconds
+
