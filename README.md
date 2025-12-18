@@ -154,17 +154,7 @@ Real-time metrics with composite health scoring algorithm
 
 ![Dashboard Overview](docs/images/dashboard-overview.png)
 
-### Predictive Analytics
 
-10-minute forecasting with linear regression and risk indicators
-
-![Predictive Analytics](docs/images/dashboard-predictive.png)
-
-### Advanced Metrics & Alerts
-
-Load average, processes, temperature, and active alert monitoring
-
-![Advanced Metrics](docs/images/dashboard-advanced.png)
 
 ---
 
