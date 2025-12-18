@@ -146,16 +146,6 @@ The startup script will:
 
 ---
 
-## � Live Demo
-
-### Dashboard Interaction
-
-![Dashboard Demo](docs/images/dashboard-demo.webp)
-
-_Interactive dashboard showing real-time metrics, health scoring, and predictive analytics_
-
----
-
 ## 🖼️ Dashboard Preview
 
 ### System Overview & Health Score
@@ -490,33 +480,6 @@ Ports are pre-configured to avoid conflicts:
 
 ---
 
-## 🎓 Resume Highlights
-
-Use these bullet points for your resume/portfolio:
-
-### DevOps Engineer
-
-- ✅ **Designed and deployed a production-ready observability platform** using Prometheus, Node Exporter, and Grafana, monitoring 8+ system metrics in real-time
-- ✅ **Implemented predictive analytics** using PromQL's `predict_linear()` function to forecast resource exhaustion 10 minutes in advance, preventing system crashes
-- ✅ **Developed intelligent alerting system** with multi-tier severity levels and composite health scoring algorithm (weighted CPU/Memory/Disk metrics)
-- ✅ **Containerized entire monitoring stack** using Docker Compose for reproducible deployments across environments
-
-### SRE (Site Reliability Engineer)
-
-- ✅ **Built advanced monitoring solution** incorporating trend analysis and forecasting to predict system overload 10 minutes before occurrence
-- ✅ **Established SLI/SLO framework** through composite health scoring (0-100 scale) with color-coded thresholds
-- ✅ **Implemented proactive alerting** that predicts issues before they impact users, reducing MTTR by enabling preventive action
-- ✅ **Designed scalable time-series data architecture** with 15-day retention and 10GB storage limits
-
-### Data Engineer / Analytics
-
-- ✅ **Developed real-time analytics pipeline** processing system metrics every 10 seconds with automated aggregation and visualization
-- ✅ **Created data visualization dashboards** with 17 panels across 7 categories using Grafana and PromQL
-- ✅ **Implemented time-series data modeling** using Prometheus TSDB with efficient query optimization
-- ✅ **Built composite scoring algorithm** combining weighted metrics (CPU: 40%, Memory: 40%, Disk: 20%) for holistic system health assessment
-
----
-
 ## 📁 Project Structure
 
 ```
@@ -544,65 +507,6 @@ smart-system-health-monitor/
 ├── ACCESS_INFO.txt            # Access URLs
 └── LICENSE                    # MIT License
 ```
-
----
-
-## 🚀 Future Enhancements
-
-### Phase 1: Enhanced Analytics
-
-- [ ] Export health score as custom Prometheus metric
-- [ ] Weekly health report generation (PDF/email)
-- [ ] Historical trend analysis (30-day patterns)
-- [ ] Anomaly detection using statistical methods
-
-### Phase 2: Multi-Node Monitoring
-
-- [ ] Monitor multiple servers from single dashboard
-- [ ] Cluster-wide health aggregation
-- [ ] Service discovery integration
-- [ ] Distributed alerting
-
-### Phase 3: Machine Learning Integration
-
-**Predictive Overload Detection with ML**
-
-Current implementation uses linear regression (`predict_linear()`). Future enhancement will incorporate LSTM neural networks for more accurate predictions:
-
-```python
-# Placeholder: ML-based prediction (future implementation)
-import tensorflow as tf
-from tensorflow import keras
-
-# LSTM model for time-series forecasting
-model = keras.Sequential([
-    keras.layers.LSTM(50, return_sequences=True, input_shape=(60, 1)),
-    keras.layers.LSTM(50, return_sequences=False),
-    keras.layers.Dense(25),
-    keras.layers.Dense(1)
-])
-
-# Train on historical metrics
-model.compile(optimizer='adam', loss='mean_squared_error')
-model.fit(historical_cpu_data, future_cpu_data, epochs=50)
-
-# Predict 30 minutes ahead (vs. current 10 minutes)
-prediction = model.predict(recent_metrics)
-```
-
-**Benefits over Linear Regression:**
-
-- Captures non-linear patterns
-- Learns seasonal trends
-- Adapts to system behavior changes
-- Extends prediction window to 30+ minutes
-
-### Phase 4: Production Hardening
-
-- [ ] TLS/SSL encryption
-- [ ] OAuth2 authentication
-- [ ] High availability setup
-- [ ] Backup and disaster recovery
 
 ---
 
