@@ -103,7 +103,7 @@ generate_disk_load() {
     ) &
 }
 
-# Function to display progress
+# Function to display progress and live system stats every 10 seconds
 show_progress() {
     local elapsed=0
     
