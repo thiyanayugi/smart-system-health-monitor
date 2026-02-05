@@ -92,7 +92,7 @@ This platform uses **trend-based forecasting** with Prometheus's `predict_linear
 ### Prerequisites
 
 - **Docker** (20.10+)
-- **Docker Compose** (1.29+)
+- **Docker Compose** (v2.0+ recommended, 1.29+ minimum)
 - **Linux OS** (tested on Ubuntu 20.04+)
 - **4GB RAM** minimum
 - **2GB free disk space**
