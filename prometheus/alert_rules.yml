@@ -45,7 +45,7 @@ groups:
 
       # ============================================================
       # PREDICTIVE CPU OVERLOAD ALERT
-      # Uses linear prediction to forecast CPU saturation 10 minutes ahead
+      # Uses predict_linear() to forecast CPU saturation 10 min ahead
       # ============================================================
       - alert: PredictedCPUOverload
         expr: |
