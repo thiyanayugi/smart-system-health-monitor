@@ -52,7 +52,7 @@ generate_cpu_load() {
     echo -e "${YELLOW}[CPU]${NC} Generating CPU load on ${cpu_threads} threads..."
     
     for i in $(seq 1 $cpu_threads); do
-        # CPU-intensive calculation in background
+        # CPU-intensive pi calculation (arctan) in background
         (
             end_time=$((SECONDS + DURATION))
             while [ $SECONDS -lt $end_time ]; do
