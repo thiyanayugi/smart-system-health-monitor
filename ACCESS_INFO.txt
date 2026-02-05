@@ -50,7 +50,8 @@ Predictive analytics active ✓
 ✓ System Uptime
 ✓ Health Score (0-100)
 ✓ 10-Minute Predictions
-✓ Load Average
+✓ Load Average (1m, 5m, 15m)
+✓ Running Processes
 ✓ Temperature (if available)
 ✓ Battery (if available)
 
