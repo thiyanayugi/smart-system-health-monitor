@@ -43,7 +43,7 @@ scrape_configs:
           instance: "local-system"
           role: "monitoring-target"
 
-    # Scrape more frequently for real-time monitoring
+    # Scrape more frequently for real-time monitoring (overrides global 15s)
     scrape_interval: 10s
     scrape_timeout: 10s
 
