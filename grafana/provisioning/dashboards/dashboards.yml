@@ -1,5 +1,6 @@
 # Grafana Dashboard Provisioning
-# Auto-loads dashboards from the dashboards directory
+# Auto-loads dashboards from the mounted dashboards directory
+# Dashboards are checked for updates every 10 seconds
 
 apiVersion: 1
 
