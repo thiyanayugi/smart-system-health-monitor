@@ -16,7 +16,7 @@ BLUE='\033[0;34m'
 CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
-# Default duration (5 minutes)
+# Default duration in seconds (5 minutes = 300s)
 DURATION=${1:-300}
 
 # Cleanup function
