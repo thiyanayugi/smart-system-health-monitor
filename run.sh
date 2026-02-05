@@ -235,20 +235,20 @@ show_access_info() {
 main() {
     clear
     print_banner
-    
+
     # Change to script directory
     cd "$(dirname "$0")"
-    
+
     check_prerequisites
     validate_configs
     create_env_file
     start_services
     wait_for_services
     show_access_info
-    
+
     echo -e "${CYAN}Press Ctrl+C to view logs, or run '${DOCKER_COMPOSE_CMD} logs -f' in another terminal${NC}"
     echo ""
-    
+
     # Follow logs
     $DOCKER_COMPOSE_CMD logs -f
 }
