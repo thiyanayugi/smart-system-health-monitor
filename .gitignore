@@ -4,6 +4,7 @@ grafana_data/
 
 # Environment files
 .env
+.env.local
 
 # Temporary files
 *.tmp
