@@ -3,10 +3,10 @@
 # and enables alerting capabilities
 
 global:
-  # How frequently to scrape targets by default
+  # Default scrape interval for all targets
   scrape_interval: 15s
 
-  # How frequently to evaluate rules
+  # How frequently to evaluate alerting and recording rules
   evaluation_interval: 15s
 
   # Attach these labels to any time series or alerts when communicating with
