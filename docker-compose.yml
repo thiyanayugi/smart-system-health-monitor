@@ -41,7 +41,7 @@ services:
       - /:/rootfs:ro
     networks:
       - monitoring
-    pid: host
+    pid: host  # Required for accurate process metrics
 
   # Grafana - Visualization and dashboards
   grafana:
