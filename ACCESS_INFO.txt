@@ -63,4 +63,5 @@ Predictive analytics active ✓
 • Grafana datasource correctly uses http://prometheus:9090
 • All data persists across restarts
 • Dashboard updates every 10-15 seconds
+• Use './stop.sh --clean' to remove all stored data
 
