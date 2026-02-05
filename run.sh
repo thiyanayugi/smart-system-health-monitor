@@ -117,17 +117,17 @@ EOF
 start_services() {
     echo -e "${BLUE}[3/5]${NC} Starting monitoring stack..."
     echo ""
-    
+
     # Pull latest images
     echo -e "${YELLOW}Pulling Docker images...${NC}"
     $DOCKER_COMPOSE_CMD pull
     echo ""
-    
+
     # Start services
     echo -e "${YELLOW}Starting services...${NC}"
     $DOCKER_COMPOSE_CMD up -d
     echo ""
-    
+
     echo -e "${GREEN}  ✓ Services started successfully!${NC}"
     echo ""
 }
