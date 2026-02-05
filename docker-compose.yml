@@ -71,6 +71,7 @@ networks:
   monitoring:
     driver: bridge
 
+# Persistent volumes to retain data across container restarts
 volumes:
   prometheus_data:
     driver: local
