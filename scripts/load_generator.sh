@@ -19,7 +19,7 @@ NC='\033[0m' # No Color
 # Default duration in seconds (5 minutes = 300s)
 DURATION=${1:-300}
 
-# Cleanup function
+# Cleanup function - kills background jobs and removes temp files
 cleanup() {
     echo -e "\n${YELLOW}Stopping load generation...${NC}"
     
