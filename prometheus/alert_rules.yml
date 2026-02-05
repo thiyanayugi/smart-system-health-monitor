@@ -65,7 +65,8 @@ groups:
 
       # ============================================================
       # MEMORY EXHAUSTION PREDICTION
-      # Detects continuous memory growth and predicts exhaustion
+      # Detects continuous memory growth using deriv() and
+      # predicts exhaustion with predict_linear()
       # ============================================================
       - alert: MemoryGrowthDetected
         expr: |
