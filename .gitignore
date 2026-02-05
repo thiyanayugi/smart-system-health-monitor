@@ -9,6 +9,7 @@ grafana_data/
 # Temporary files
 *.tmp
 *.log
+*.pid
 /tmp/
 
 # Load test files
