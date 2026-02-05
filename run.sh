@@ -54,7 +54,7 @@ check_prerequisites() {
         echo -e "${YELLOW}Please install Docker Compose: https://docs.docker.com/compose/install/${NC}"
         exit 1
     fi
-    
+
     if command -v docker-compose &> /dev/null; then
         DOCKER_COMPOSE_CMD="docker-compose"
         echo -e "${GREEN}  ✓ Docker Compose found: $(docker-compose --version)${NC}"
@@ -62,7 +62,7 @@ check_prerequisites() {
         DOCKER_COMPOSE_CMD="docker compose"
         echo -e "${GREEN}  ✓ Docker Compose found: $(docker compose version)${NC}"
     fi
-    
+
     # Check if Docker daemon is running
     if ! docker info &> /dev/null; then
         echo -e "${RED}✗ Docker daemon is not running!${NC}"
@@ -70,7 +70,7 @@ check_prerequisites() {
         exit 1
     fi
     echo -e "${GREEN}  ✓ Docker daemon is running${NC}"
-    
+
     echo ""
 }
 
