@@ -26,9 +26,9 @@ global:
 rule_files:
   - "alert_rules.yml"
 
-# Scrape configurations
+# Scrape configurations - define targets and their scrape parameters
 scrape_configs:
-  # Scrape Prometheus itself
+  # Scrape Prometheus itself for internal metrics
   - job_name: "prometheus"
     static_configs:
       - targets: ["localhost:9090"]
