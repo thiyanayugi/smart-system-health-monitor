@@ -28,7 +28,7 @@ URL: http://localhost:9100/metrics
 ⚙️  QUICK COMMANDS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Start:        ./run.sh
-Stop:         ./stop.sh
+Stop:         ./stop.sh [--clean]
 Status:       docker compose ps
 Logs:         docker compose logs -f
 Demo Load:    ./scripts/load_generator.sh
