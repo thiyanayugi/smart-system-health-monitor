@@ -19,6 +19,7 @@ grafana_data/
 *.swp
 *.swo
 *~
+*.bak
 
 # OS
 .DS_Store
