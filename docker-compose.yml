@@ -66,6 +66,7 @@ services:
     depends_on:
       - prometheus
 
+# Shared network for inter-service communication
 networks:
   monitoring:
     driver: bridge
