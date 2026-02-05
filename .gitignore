@@ -28,3 +28,6 @@ Thumbs.db
 
 # Docker
 .docker/
+
+# Node (in case of Grafana plugin development)
+node_modules/
