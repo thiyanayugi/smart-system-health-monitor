@@ -39,7 +39,7 @@ EOF
 # Check prerequisites
 check_prerequisites() {
     echo -e "${BLUE}[1/5]${NC} Checking prerequisites..."
-    
+
     # Check Docker
     if ! command -v docker &> /dev/null; then
         echo -e "${RED}✗ Docker is not installed!${NC}"
