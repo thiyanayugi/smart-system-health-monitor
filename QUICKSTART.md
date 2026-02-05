@@ -153,9 +153,9 @@ Generate system load to trigger predictive alerts:
 
 ---
 
-## 📊 Current System Metrics (Live Example)
+## 📊 Current System Metrics (Example Values)
 
-Based on your current system state:
+Example metrics from a typical system:
 
 - **CPU Usage**: ~24%
 - **Memory Usage**: ~70%
