@@ -9,6 +9,7 @@ groups:
       # ============================================================
       # COMPOSITE HEALTH SCORE ALERT
       # Triggers when overall system health degrades
+      # Formula: (CPU * 0.4) + (Memory * 0.4) + (Disk * 0.2)
       # ============================================================
       - alert: HighSystemHealthScore
         expr: |
