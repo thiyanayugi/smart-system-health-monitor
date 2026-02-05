@@ -158,7 +158,7 @@ Real-time metrics with composite health scoring algorithm
 
 ---
 
-## �🏗️ Architecture
+## 🏗️ Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
