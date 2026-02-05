@@ -1,5 +1,6 @@
 # Alert Rules for Smart System Health Monitor
 # These rules implement intelligent alerting with predictive capabilities
+# Evaluated according to the global evaluation_interval (15s)
 
 groups:
   - name: system_health_alerts
