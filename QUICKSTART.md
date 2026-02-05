@@ -69,7 +69,7 @@ The dashboard displays:
 ### Start the Monitoring Stack
 
 ```bash
-cd /home/yugi/Job\ Apply/data\ engg/smart-system-health-monitor
+cd smart-system-health-monitor
 ./run.sh
 ```
 
