@@ -7,8 +7,8 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
-      - '--storage.tsdb.retention.time=15d'
-      - '--storage.tsdb.retention.size=10GB'
+      - '--storage.tsdb.retention.time=15d'   # Keep data for 15 days
+      - '--storage.tsdb.retention.size=10GB'  # Max storage size
       - '--web.console.libraries=/etc/prometheus/console_libraries'
       - '--web.console.templates=/etc/prometheus/consoles'
       - '--web.enable-lifecycle'  # Allows config reload via HTTP
