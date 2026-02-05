@@ -77,7 +77,7 @@ check_prerequisites() {
 # Validate configuration files
 validate_configs() {
     echo -e "${BLUE}[2/5]${NC} Validating configuration files..."
-    
+
     local config_files=(
         "prometheus/prometheus.yml"
         "prometheus/alert_rules.yml"
@@ -86,7 +86,7 @@ validate_configs() {
         "grafana/dashboards/system_health_dashboard.json"
         "docker-compose.yml"
     )
-    
+
     for file in "${config_files[@]}"; do
         if [ ! -f "$file" ]; then
             echo -e "${RED}✗ Missing configuration file: $file${NC}"
@@ -94,7 +94,7 @@ validate_configs() {
         fi
         echo -e "${GREEN}  ✓ $file${NC}"
     done
-    
+
     echo ""
 }
 
