@@ -62,7 +62,7 @@ generate_cpu_load() {
     done
 }
 
-# Function to generate memory load
+# Function to generate memory load using dd to /tmp
 generate_memory_load() {
     echo -e "${YELLOW}[MEMORY]${NC} Generating gradual memory load..."
     
