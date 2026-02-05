@@ -135,7 +135,7 @@ start_services() {
 # Wait for services to be ready
 wait_for_services() {
     echo -e "${BLUE}[4/5]${NC} Waiting for services to be ready..."
-    
+
     # Wait for Prometheus
     echo -e "${YELLOW}  → Waiting for Prometheus...${NC}"
     local prometheus_ready=false
@@ -146,13 +146,13 @@ wait_for_services() {
         fi
         sleep 2
     done
-    
+
     if [ "$prometheus_ready" = true ]; then
         echo -e "${GREEN}  ✓ Prometheus is ready${NC}"
     else
         echo -e "${YELLOW}  ⚠ Prometheus may still be starting...${NC}"
     fi
-    
+
     # Wait for Node Exporter
     echo -e "${YELLOW}  → Waiting for Node Exporter...${NC}"
     local node_exporter_ready=false
@@ -163,13 +163,13 @@ wait_for_services() {
         fi
         sleep 2
     done
-    
+
     if [ "$node_exporter_ready" = true ]; then
         echo -e "${GREEN}  ✓ Node Exporter is ready${NC}"
     else
         echo -e "${YELLOW}  ⚠ Node Exporter may still be starting...${NC}"
     fi
-    
+
     # Wait for Grafana
     echo -e "${YELLOW}  → Waiting for Grafana...${NC}"
     local grafana_ready=false
@@ -180,13 +180,13 @@ wait_for_services() {
         fi
         sleep 2
     done
-    
+
     if [ "$grafana_ready" = true ]; then
         echo -e "${GREEN}  ✓ Grafana is ready${NC}"
     else
         echo -e "${YELLOW}  ⚠ Grafana may still be starting...${NC}"
     fi
-    
+
     echo ""
 }
 
