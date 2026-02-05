@@ -92,7 +92,7 @@ generate_disk_load() {
         counter=1
         
         while [ $SECONDS -lt $end_time ]; do
-            # Write and read operations
+            # Write 50MB, read it back, then remove the file
             dd if=/dev/zero of=/tmp/load_test_disk_${counter} bs=1M count=50 2>/dev/null
             dd if=/tmp/load_test_disk_${counter} of=/dev/null bs=1M 2>/dev/null
             rm -f /tmp/load_test_disk_${counter}
