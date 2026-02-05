@@ -223,6 +223,7 @@ If you see "address already in use" errors, the ports are already configured to 
 
 - Default credentials: `admin` / `admin`
 - You'll be prompted to change password on first login (can skip)
+- Credentials can be customized via `.env` file (see `.env.example`)
 
 ---
 
