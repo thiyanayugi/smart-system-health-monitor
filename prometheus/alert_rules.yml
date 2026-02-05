@@ -98,6 +98,7 @@ groups:
       # ============================================================
       # CURRENT RESOURCE ALERTS
       # Traditional threshold-based alerts for immediate issues
+      # Covers CPU, memory, and disk utilization
       # ============================================================
       - alert: HighCPUUsage
         expr: |
