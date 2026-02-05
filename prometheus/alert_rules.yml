@@ -136,6 +136,7 @@ groups:
 
       # ============================================================
       # SYSTEM STABILITY ALERTS
+      # Monitors load average and process count thresholds
       # ============================================================
       - alert: HighLoadAverage
         expr: |
