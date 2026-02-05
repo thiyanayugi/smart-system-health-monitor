@@ -92,7 +92,7 @@ This platform uses **trend-based forecasting** with Prometheus's `predict_linear
 ### Prerequisites
 
 - **Docker** (20.10+)
-- **Docker Compose** (1.29+)
+- **Docker Compose** (v2.0+ recommended, 1.29+ minimum)
 - **Linux OS** (tested on Ubuntu 20.04+)
 - **4GB RAM** minimum
 - **2GB free disk space**
@@ -158,7 +158,7 @@ Real-time metrics with composite health scoring algorithm
 
 ---
 
-## �🏗️ Architecture
+## 🏗️ Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -312,7 +312,7 @@ Impact: System may become CPU-bound soon. Response times will degrade.
 Recommendation: Investigate high CPU processes using 'top' or 'htop'.
 Consider scaling resources or deferring non-critical tasks.
 
-Timestamp: 2025-12-18 08:45:00 UTC
+Timestamp: 2026-01-15 08:45:00 UTC
 ```
 
 ### Webhook Integration (Optional)
@@ -549,7 +549,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
 ---
 

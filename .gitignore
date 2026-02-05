@@ -4,10 +4,12 @@ grafana_data/
 
 # Environment files
 .env
+.env.local
 
 # Temporary files
 *.tmp
 *.log
+*.pid
 /tmp/
 
 # Load test files
@@ -19,6 +21,7 @@ grafana_data/
 *.swp
 *.swo
 *~
+*.bak
 
 # OS
 .DS_Store
@@ -26,3 +29,6 @@ Thumbs.db
 
 # Docker
 .docker/
+
+# Node (in case of Grafana plugin development)
+node_modules/

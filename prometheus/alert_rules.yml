@@ -1,5 +1,6 @@
 # Alert Rules for Smart System Health Monitor
 # These rules implement intelligent alerting with predictive capabilities
+# Evaluated according to the global evaluation_interval (15s)
 
 groups:
   - name: system_health_alerts
@@ -8,6 +9,7 @@ groups:
       # ============================================================
       # COMPOSITE HEALTH SCORE ALERT
       # Triggers when overall system health degrades
+      # Formula: (CPU * 0.4) + (Memory * 0.4) + (Disk * 0.2)
       # ============================================================
       - alert: HighSystemHealthScore
         expr: |
@@ -43,7 +45,7 @@ groups:
 
       # ============================================================
       # PREDICTIVE CPU OVERLOAD ALERT
-      # Uses linear prediction to forecast CPU saturation 10 minutes ahead
+      # Uses predict_linear() to forecast CPU saturation 10 min ahead
       # ============================================================
       - alert: PredictedCPUOverload
         expr: |
@@ -63,7 +65,8 @@ groups:
 
       # ============================================================
       # MEMORY EXHAUSTION PREDICTION
-      # Detects continuous memory growth and predicts exhaustion
+      # Detects continuous memory growth using deriv() and
+      # predicts exhaustion with predict_linear()
       # ============================================================
       - alert: MemoryGrowthDetected
         expr: |
@@ -95,6 +98,7 @@ groups:
       # ============================================================
       # CURRENT RESOURCE ALERTS
       # Traditional threshold-based alerts for immediate issues
+      # Covers CPU, memory, and disk utilization
       # ============================================================
       - alert: HighCPUUsage
         expr: |
@@ -135,6 +139,7 @@ groups:
 
       # ============================================================
       # SYSTEM STABILITY ALERTS
+      # Monitors load average and process count thresholds
       # ============================================================
       - alert: HighLoadAverage
         expr: |

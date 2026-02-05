@@ -28,7 +28,7 @@ URL: http://localhost:9100/metrics
 ⚙️  QUICK COMMANDS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Start:        ./run.sh
-Stop:         ./stop.sh
+Stop:         ./stop.sh [--clean]
 Status:       docker compose ps
 Logs:         docker compose logs -f
 Demo Load:    ./scripts/load_generator.sh
@@ -50,7 +50,8 @@ Predictive analytics active ✓
 ✓ System Uptime
 ✓ Health Score (0-100)
 ✓ 10-Minute Predictions
-✓ Load Average
+✓ Load Average (1m, 5m, 15m)
+✓ Running Processes
 ✓ Temperature (if available)
 ✓ Battery (if available)
 
@@ -62,4 +63,5 @@ Predictive analytics active ✓
 • Grafana datasource correctly uses http://prometheus:9090
 • All data persists across restarts
 • Dashboard updates every 10-15 seconds
+• Use './stop.sh --clean' to remove all stored data
 

@@ -1,5 +1,6 @@
 # Grafana Datasource Provisioning
 # Auto-configures Prometheus as the default datasource
+# Uses internal Docker network URL (prometheus:9090)
 
 apiVersion: 1
 

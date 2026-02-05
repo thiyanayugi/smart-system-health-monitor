@@ -69,7 +69,7 @@ The dashboard displays:
 ### Start the Monitoring Stack
 
 ```bash
-cd /home/yugi/Job\ Apply/data\ engg/smart-system-health-monitor
+cd smart-system-health-monitor
 ./run.sh
 ```
 
@@ -153,9 +153,9 @@ Generate system load to trigger predictive alerts:
 
 ---
 
-## 📊 Current System Metrics (Live Example)
+## 📊 Current System Metrics (Example Values)
 
-Based on your current system state:
+Example metrics from a typical system:
 
 - **CPU Usage**: ~24%
 - **Memory Usage**: ~70%
@@ -223,6 +223,7 @@ If you see "address already in use" errors, the ports are already configured to 
 
 - Default credentials: `admin` / `admin`
 - You'll be prompted to change password on first login (can skip)
+- Credentials can be customized via `.env` file (see `.env.example`)
 
 ---
 

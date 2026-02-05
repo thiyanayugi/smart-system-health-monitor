@@ -13,12 +13,13 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
+CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
-# Default duration (5 minutes)
+# Default duration in seconds (5 minutes = 300s)
 DURATION=${1:-300}
 
-# Cleanup function
+# Cleanup function - kills background jobs and removes temp files
 cleanup() {
     echo -e "\n${YELLOW}Stopping load generation...${NC}"
     
@@ -51,7 +52,7 @@ generate_cpu_load() {
     echo -e "${YELLOW}[CPU]${NC} Generating CPU load on ${cpu_threads} threads..."
     
     for i in $(seq 1 $cpu_threads); do
-        # CPU-intensive calculation in background
+        # CPU-intensive pi calculation (arctan) in background
         (
             end_time=$((SECONDS + DURATION))
             while [ $SECONDS -lt $end_time ]; do
@@ -61,7 +62,7 @@ generate_cpu_load() {
     done
 }
 
-# Function to generate memory load
+# Function to generate memory load using dd to /tmp
 generate_memory_load() {
     echo -e "${YELLOW}[MEMORY]${NC} Generating gradual memory load..."
     
@@ -91,7 +92,7 @@ generate_disk_load() {
         counter=1
         
         while [ $SECONDS -lt $end_time ]; do
-            # Write and read operations
+            # Write 50MB, read it back, then remove the file
             dd if=/dev/zero of=/tmp/load_test_disk_${counter} bs=1M count=50 2>/dev/null
             dd if=/tmp/load_test_disk_${counter} of=/dev/null bs=1M 2>/dev/null
             rm -f /tmp/load_test_disk_${counter}
@@ -102,7 +103,7 @@ generate_disk_load() {
     ) &
 }
 
-# Function to display progress
+# Function to display progress and live system stats every 10 seconds
 show_progress() {
     local elapsed=0
     
